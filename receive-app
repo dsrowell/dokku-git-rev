@@ -7,7 +7,7 @@ main() {
 
   # Don't write the revision if there is no git repository or we have no incoming REV.
   if [[ -d "$DOKKU_ROOT/$APP/refs" ]] && [[ -n "$REV" ]]; then
-    config_set --no-restart "$APP" GIT_REV="$REV"
+    config_set "$APP" GIT_REV="$REV"
   fi
 }
 
